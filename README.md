@@ -1,71 +1,57 @@
-# Job Accordion Module for Divi
+# Job Accordion Divi Module
 
-A custom Divi module to display job positions in an accordion format.
+A custom Divi module that displays job listings in an elegant accordion format. Perfect for career pages and job boards.
 
-## Description
+![Job Accordion Preview](images/preview.png)
 
-The Job Accordion Module allows you to create expandable job listings for your WordPress website built with Divi. It provides a clean, organized way to display job openings with details that expand when clicked.
+## Features
 
-### Features
-
-- Clean accordion interface for job listings
-- Customizable job titles, descriptions, and locations
-- Apply button with customizable URL and text
-- Fully responsive design
-- Integrated with Divi's styling options
-- Compatible with Divi Theme and Divi Builder plugin
+- Clean and modern design
+- Responsive layout
+- Smooth accordion animations
+- Location indicator with custom icon
+- Apply button with hover effects
+- Easy to customize and integrate
 
 ## Installation
 
-1. Upload the `job-accordion` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Make sure Divi Theme or Divi Builder plugin is active
-4. The module will appear in the Divi Builder modules list as "Job Accordion"
+1. Download the latest release zip file
+2. Log in to your WordPress admin panel
+3. Go to Plugins > Add New > Upload Plugin
+4. Upload the zip file and click "Install Now"
+5. Activate the plugin
 
 ## Usage
 
-1. Create or edit a page using the Divi Builder
-2. Add a new module by clicking the "+" button
-3. Search for "Job Accordion" in the modules list
-4. Configure the module with your job information:
-   - Job Title
-   - Job Description
-   - Job Location
-   - Apply Button URL
-   - Apply Button Text
-5. Use the Design tab to customize the appearance
-6. Save your changes
-
-## Customization
-
-The module integrates with Divi's design settings, allowing you to customize:
-
-- Typography (font, size, color, etc.)
-- Borders and border radius
-- Spacing (margin and padding)
-- Background colors
-- Button styles
-- Shadow effects
+1. Create or edit a page using Divi Builder
+2. Add a new module and search for "Job Accordion"
+3. Configure your job listings with:
+   - Job title
+   - Location
+   - Job description
+   - Apply button URL
+   - Custom styling options
 
 ## Requirements
 
 - WordPress 5.0 or higher
-- Divi Theme 4.0+ or Divi Builder Plugin 4.0+
-- PHP 7.0 or higher
+- Divi Theme or Divi Builder plugin
+- PHP 7.2 or higher
 
-## Changelog
+## Customization
 
-### 1.0
-- Initial release
+The module comes with built-in styling options in the Divi Builder. You can customize:
 
-## License
-
-This plugin is licensed under the GPL v2 or later.
-
-## Credits
-
-Developed as a custom Divi extension.
+- Colors
+- Typography
+- Spacing
+- Border styles
+- And more...
 
 ## Support
 
-For support, please contact the plugin developer. 
+For support, please create an issue in the GitHub repository or contact our support team.
+
+## License
+
+This project is licensed under the GPL v2 or later 
