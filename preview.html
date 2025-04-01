@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Accordion Preview</title>
+    <link rel="stylesheet" href="css/job-accordion-style.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: #f5f5f5;
+        }
+        .preview-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <h1>Job Accordion Preview</h1>
+
+        <!-- Example 1 -->
+        <div class="jam-job-accordion" id="job-accordion-1">
+            <div class="job-header">
+                <h3 class="job-title">Senior Web Developer</h3>
+                <div class="job-location-apply">
+                    <div class="job-location">San Francisco, CA</div>
+                    <a href="#" class="job-apply-button no-arrow-button">Apply</a>
+                </div>
+                <div class="toggle-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 10 12 15 17 10"></polyline></svg>
+                </div>
+            </div>
+            <div class="job-content">
+                <div class="job-description">
+                    <p>We are seeking an experienced Senior Web Developer to join our team. The ideal candidate will have:</p>
+                    <ul>
+                        <li>5+ years of experience with modern web technologies</li>
+                        <li>Strong proficiency in JavaScript, HTML5, and CSS3</li>
+                        <li>Experience with React or similar frameworks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="jam-job-accordion" id="job-accordion-2">
+            <div class="job-header">
+                <h3 class="job-title">UX Designer</h3>
+                <div class="job-location-apply">
+                    <div class="job-location">Remote</div>
+                    <a href="#" class="job-apply-button no-arrow-button">Apply</a>
+                </div>
+                <div class="toggle-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 10 12 15 17 10"></polyline></svg>
+                </div>
+            </div>
+            <div class="job-content">
+                <div class="job-description">
+                    <p>We're looking for a talented UX Designer to create amazing user experiences. Requirements include:</p>
+                    <ul>
+                        <li>3+ years of UX design experience</li>
+                        <li>Proficiency with Figma and other design tools</li>
+                        <li>Strong portfolio demonstrating user-centered design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/job-accordion.js"></script>
+</body>
+</html> 

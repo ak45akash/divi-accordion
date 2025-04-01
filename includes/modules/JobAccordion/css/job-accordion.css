@@ -1,0 +1,76 @@
+/* Job Accordion Module Styles */
+.jam-job-accordion {
+    margin-bottom: 20px;
+    /* border: 1px solid #e2e2e2;
+    border-radius: 3px; */
+    overflow: hidden;
+    background-color: #fff;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+}
+
+.jam-job-accordion .job-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #264C45;
+    border-radius: 24px;
+}
+
+.jam-job-accordion .job-title {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.jam-job-accordion .job-location {
+    margin-right: 30px;
+    color: #666;
+    font-size: 14px;
+    padding: 4px 32px;
+    border-radius: 30px;
+    background-color: #264C45;
+}
+
+.jam-job-accordion .toggle-icon {
+    font-size: 16px;
+    color: #333;
+}
+
+.jam-job-accordion .job-content {
+    padding: 20px;
+    border-top: 1px solid #e2e2e2;
+}
+
+.jam-job-accordion .job-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.jam-job-accordion .job-apply-button {
+    display: inline-block;
+    padding: 4px 32px;
+    background-color: #f77e3d;
+    color: #264C45 !important;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 4px 32px;
+}
+
+.jam-job-accordion .job-apply-button:hover {
+    background-color: #f77e3d;
+    padding: 4px 32px;
+    color: #fff !important;
+} 
+
+.jam-job-accordion .toggle-icon svg {
+    width: 36px;
+    height: 36px;
+}
