@@ -3,78 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Accordion Preview</title>
+    <title>Job & Tender Accordion Preview</title>
     <link rel="stylesheet" href="css/job-accordion-style.css">
+    <link rel="stylesheet" href="css/tender-accordion-style.css">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background: #f5f5f5;
-        }
-        .preview-container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            color: #333;
         }
         h1 {
-            color: #333;
-            margin-bottom: 30px;
             text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .section-title {
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <div class="preview-container">
-        <h1>Job Accordion Preview</h1>
-
-        <!-- Example 1 -->
-        <div class="jam-job-accordion" id="job-accordion-1">
-            <div class="job-header">
-                <h3 class="job-title">Senior Web Developer</h3>
-                <div class="job-location-apply">
-                    <div class="job-location">San Francisco, CA</div>
-                    <a href="#" class="job-apply-button no-arrow-button">Apply</a>
-                </div>
+    <h1>Job & Tender Accordion Preview</h1>
+    
+    <h2 class="section-title">Job Listings</h2>
+    
+    <!-- Job Accordion 1 -->
+    <div class="jam-job-accordion" id="job-accordion-1">
+        <div class="job-header">
+            <div class="job-title-wrapper">
+                <h3 class="job-title">Senior Software Engineer</h3>
                 <div class="toggle-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 10 12 15 17 10"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </div>
             </div>
-            <div class="job-content">
-                <div class="job-description">
-                    <p>We are seeking an experienced Senior Web Developer to join our team. The ideal candidate will have:</p>
-                    <ul>
-                        <li>5+ years of experience with modern web technologies</li>
-                        <li>Strong proficiency in JavaScript, HTML5, and CSS3</li>
-                        <li>Experience with React or similar frameworks</li>
-                    </ul>
+            <div class="job-info-actions">
+                <div class="job-location">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="-4 0 32 32" fill="currentColor" stroke="none"><path d="M12,29 C10.337,29.009 2,16.181 2,12 C2,6.478 6.477,2 12,2 C17.523,2 22,6.478 22,12 C22,16.125 13.637,29.009 12,29 L12,29 Z M12,0 C5.373,0 0,5.373 0,12 C0,17.018 10.005,32.011 12,32 C13.964,32.011 24,16.95 24,12 C24,5.373 18.627,0 12,0 L12,0 Z M12,15 C10.343,15 9,13.657 9,12 C9,10.343 10.343,9 12,9 C13.657,9 15,10.343 15,12 C15,13.657 13.657,15 12,15 L12,15 Z M12,7 C9.239,7 7,9.238 7,12 C7,14.762 9.239,17 12,17 C14.761,17 17,14.762 17,12 C17,9.238 14.761,7 12,7 L12,7 Z"></path></svg>
+                    <span>San Francisco, CA</span>
                 </div>
+                <a href="#" class="job-apply-button no-arrow-button">Apply</a>
             </div>
         </div>
-
-        <!-- Example 2 -->
-        <div class="jam-job-accordion" id="job-accordion-2">
-            <div class="job-header">
-                <h3 class="job-title">UX Designer</h3>
-                <div class="job-location-apply">
-                    <div class="job-location">Remote</div>
-                    <a href="#" class="job-apply-button no-arrow-button">Apply</a>
-                </div>
+        <div class="job-content">
+            <div class="job-description">
+                <p>We are looking for a Senior Software Engineer to join our team. The ideal candidate will have experience with modern web technologies and a passion for building scalable applications.</p>
+                <h4>Requirements:</h4>
+                <ul>
+                    <li>5+ years of experience in software development</li>
+                    <li>Strong proficiency in JavaScript, HTML, and CSS</li>
+                    <li>Experience with React, Node.js, or similar frameworks</li>
+                    <li>Excellent problem-solving skills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Job Accordion 2 -->
+    <div class="jam-job-accordion" id="job-accordion-2">
+        <div class="job-header">
+            <div class="job-title-wrapper">
+                <h3 class="job-title">UX/UI Designer</h3>
                 <div class="toggle-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 10 12 15 17 10"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </div>
             </div>
-            <div class="job-content">
-                <div class="job-description">
-                    <p>We're looking for a talented UX Designer to create amazing user experiences. Requirements include:</p>
-                    <ul>
-                        <li>3+ years of UX design experience</li>
-                        <li>Proficiency with Figma and other design tools</li>
-                        <li>Strong portfolio demonstrating user-centered design</li>
-                    </ul>
+            <div class="job-info-actions">
+                <div class="job-location">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="-4 0 32 32" fill="currentColor" stroke="none"><path d="M12,29 C10.337,29.009 2,16.181 2,12 C2,6.478 6.477,2 12,2 C17.523,2 22,6.478 22,12 C22,16.125 13.637,29.009 12,29 L12,29 Z M12,0 C5.373,0 0,5.373 0,12 C0,17.018 10.005,32.011 12,32 C13.964,32.011 24,16.95 24,12 C24,5.373 18.627,0 12,0 L12,0 Z M12,15 C10.343,15 9,13.657 9,12 C9,10.343 10.343,9 12,9 C13.657,9 15,10.343 15,12 C15,13.657 13.657,15 12,15 L12,15 Z M12,7 C9.239,7 7,9.238 7,12 C7,14.762 9.239,17 12,17 C14.761,17 17,14.762 17,12 C17,9.238 14.761,7 12,7 L12,7 Z"></path></svg>
+                    <span>Remote</span>
                 </div>
+                <a href="#" class="job-apply-button no-arrow-button">Apply</a>
+            </div>
+        </div>
+        <div class="job-content">
+            <div class="job-description">
+                <p>We are seeking a talented UX/UI Designer to create beautiful and intuitive user interfaces for our products. The ideal candidate will have a strong portfolio and experience with modern design tools.</p>
+                <h4>Requirements:</h4>
+                <ul>
+                    <li>3+ years of experience in UX/UI design</li>
+                    <li>Proficiency in Figma, Sketch, or similar tools</li>
+                    <li>Strong understanding of user-centered design principles</li>
+                    <li>Experience with responsive design</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <h2 class="section-title">Tender Listings</h2>
+    
+    <!-- Tender Accordion 1 -->
+    <div class="jam-tender-accordion" id="tender-accordion-1">
+        <div class="tender-header">
+            <div class="tender-title-wrapper">
+                <h3 class="tender-title">Construction of Office Building</h3>
+                <div class="toggle-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="tender-info-actions">
+                <div class="tender-location">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="-4 0 32 32" fill="currentColor" stroke="none"><path d="M12,29 C10.337,29.009 2,16.181 2,12 C2,6.478 6.477,2 12,2 C17.523,2 22,6.478 22,12 C22,16.125 13.637,29.009 12,29 L12,29 Z M12,0 C5.373,0 0,5.373 0,12 C0,17.018 10.005,32.011 12,32 C13.964,32.011 24,16.95 24,12 C24,5.373 18.627,0 12,0 L12,0 Z M12,15 C10.343,15 9,13.657 9,12 C9,10.343 10.343,9 12,9 C13.657,9 15,10.343 15,12 C15,13.657 13.657,15 12,15 L12,15 Z M12,7 C9.239,7 7,9.238 7,12 C7,14.762 9.239,17 12,17 C14.761,17 17,14.762 17,12 C17,9.238 14.761,7 12,7 L12,7 Z"></path></svg>
+                    <span>New York, NY</span>
+                </div>
+                <div class="tender-closing-date">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>Closing: June 15, 2023</span>
+                </div>
+                <a href="#" class="tender-download-button no-arrow-button">Download Tender</a>
+            </div>
+        </div>
+        <div class="tender-content">
+            <div class="tender-description">
+                <p>We are inviting tenders for the construction of a new office building in New York City. The project includes the design and construction of a 10-story office building with modern amenities.</p>
+                <h4>Project Details:</h4>
+                <ul>
+                    <li>Total area: 50,000 square feet</li>
+                    <li>Estimated budget: $20 million</li>
+                    <li>Timeline: 18 months</li>
+                    <li>LEED certification required</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tender Accordion 2 -->
+    <div class="jam-tender-accordion" id="tender-accordion-2">
+        <div class="tender-header">
+            <div class="tender-title-wrapper">
+                <h3 class="tender-title">IT Infrastructure Upgrade</h3>
+                <div class="toggle-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+            </div>
+            <div class="tender-info-actions">
+                <div class="tender-location">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="-4 0 32 32" fill="currentColor" stroke="none"><path d="M12,29 C10.337,29.009 2,16.181 2,12 C2,6.478 6.477,2 12,2 C17.523,2 22,6.478 22,12 C22,16.125 13.637,29.009 12,29 L12,29 Z M12,0 C5.373,0 0,5.373 0,12 C0,17.018 10.005,32.011 12,32 C13.964,32.011 24,16.95 24,12 C24,5.373 18.627,0 12,0 L12,0 Z M12,15 C10.343,15 9,13.657 9,12 C9,10.343 10.343,9 12,9 C13.657,9 15,10.343 15,12 C15,13.657 13.657,15 12,15 L12,15 Z M12,7 C9.239,7 7,9.238 7,12 C7,14.762 9.239,17 12,17 C14.761,17 17,14.762 17,12 C17,9.238 14.761,7 12,7 L12,7 Z"></path></svg>
+                    <span>Chicago, IL</span>
+                </div>
+                <div class="tender-closing-date">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>Closing: July 30, 2023</span>
+                </div>
+                <a href="#" class="tender-download-button no-arrow-button">Download Tender</a>
+            </div>
+        </div>
+        <div class="tender-content">
+            <div class="tender-description">
+                <p>We are seeking proposals for upgrading our IT infrastructure. The project includes server upgrades, network improvements, and implementation of cloud services.</p>
+                <h4>Project Scope:</h4>
+                <ul>
+                    <li>Server hardware upgrade</li>
+                    <li>Network infrastructure modernization</li>
+                    <li>Cloud migration services</li>
+                    <li>Security implementation</li>
+                </ul>
             </div>
         </div>
     </div>
