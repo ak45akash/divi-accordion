@@ -1,22 +1,27 @@
 <?php
 /*
-Plugin Name: Job Accordion Module
-Plugin URI: 
-Description: A custom Divi module to display job positions in an accordion format
+Plugin Name: Job & Tender Accordion for Divi
+Plugin URI: https://github.com/ak45akash/divi-accordion
+Description: A custom Divi module that displays job listings and tenders in an elegant accordion format.
 Version: 1.0
-Author: 
-Author URI: 
-License: GPL2
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: job-accordion-module
-Domain Path: /languages
+Author: Your Name
+Author URI: https://your-website.com
+License: GPL v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: jam-accordion
 */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
 
-define('JAM_VERSION', '1.0');
+define('JAM_VERSION', '1.0.0');
 define('JAM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('JAM_PLUGIN_URL', plugin_dir_url(__FILE__));
+
+// Include the Divi module files
+require_once JAM_PLUGIN_DIR . 'includes/modules/JobAccordion/JobAccordion.php';
+require_once JAM_PLUGIN_DIR . 'includes/modules/TenderAccordion/TenderAccordion.php';
 
 /**
  * Check if Divi theme or Divi Builder is active
@@ -255,4 +260,13 @@ function jam_activate() {
 // Deactivation function
 function jam_deactivate() {
     flush_rewrite_rules();
-} 
+}
+
+// Enqueue scripts and styles
+function jam_enqueue_scripts() {
+    wp_enqueue_style('jam-job-accordion-style', JAM_PLUGIN_URL . 'css/job-accordion-style.css', array(), JAM_VERSION);
+    wp_enqueue_style('jam-tender-accordion-style', JAM_PLUGIN_URL . 'css/tender-accordion-style.css', array(), JAM_VERSION);
+    wp_enqueue_script('jam-accordion-script', JAM_PLUGIN_URL . 'js/job-accordion.js', array('jquery'), JAM_VERSION, true);
+}
+add_action('wp_enqueue_scripts', 'jam_enqueue_scripts');
+add_action('et_builder_ready', 'jam_enqueue_scripts'); 
