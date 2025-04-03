@@ -26,8 +26,13 @@ function jam_initialize_extension() {
     if (class_exists('ET_Builder_Module')) {
         require_once JAM_PLUGIN_DIR . 'includes/JobAccordion.php';
         require_once JAM_PLUGIN_DIR . 'includes/TenderAccordion.php';
+        
         new JAM_JobAccordion();
         new JAM_TenderAccordion();
+        
+        if (function_exists('et_builder_add_main_css')) {
+            et_builder_add_main_css('jam-tender-accordion-style', JAM_PLUGIN_URL . 'css/tender-accordion-style.css');
+        }
     }
 }
 add_action('et_builder_ready', 'jam_initialize_extension');

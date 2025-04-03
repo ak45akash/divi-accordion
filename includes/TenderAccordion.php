@@ -6,8 +6,11 @@ class JAM_TenderAccordion extends ET_Builder_Module {
 
     public function init() {
         $this->name = esc_html__('Tender Accordion', 'jam-accordion');
-        $this->icon = 'n';
+        $this->plural = esc_html__('Tender Accordions', 'jam-accordion');
+        $this->icon = 'd';
         $this->main_css_element = '%%order_class%%';
+        $this->category = esc_html__('Custom', 'jam-accordion');
+        $this->help_videos = array();
     }
 
     public function get_fields() {
