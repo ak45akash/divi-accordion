@@ -1,4 +1,9 @@
 jQuery(document).ready(function($) {
+    // Initialize accordions as closed by default
+    $('.jam-job-accordion').addClass('closed');
+    $('.jam-job-accordion .job-content').hide();
+    $('.jam-tender-accordion .tender-content').hide();
+    
     // Job Accordion functionality
     $('.jam-job-accordion .job-header').on('click', function(e) {
         // Prevent action if clicking on apply button
@@ -13,11 +18,7 @@ jQuery(document).ready(function($) {
         $accordion.toggleClass('closed');
         
         // Toggle the content display
-        if ($content.is(':visible')) {
-            $content.slideUp(300);
-        } else {
-            $content.slideDown(300);
-        }
+        $content.slideToggle(300);
     });
     
     // Tender Accordion functionality
@@ -31,10 +32,6 @@ jQuery(document).ready(function($) {
         var $content = $accordion.find('.tender-content');
         
         // Toggle the content display
-        if ($content.is(':visible')) {
-            $content.slideUp(300);
-        } else {
-            $content.slideDown(300);
-        }
+        $content.slideToggle(300);
     });
 }); 
