@@ -7,6 +7,8 @@
 }
 
 .tender-header {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
     cursor: pointer;
 }
@@ -33,11 +35,15 @@
 }
 
 .tender-location, .tender-closing-date {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #666;
-    font-size: 14px;
+    position: relative;
+    color: #264c45;
+    font-size: 13px;
+    background: #f5f5f5;
+    padding: 4px 16px;
+    border-radius: 30px;
+    border: 1px solid #264c45;
+    font-weight: 600;
+    cursor: default;
 }
 
 .tender-location svg, .tender-closing-date svg {
@@ -47,14 +53,12 @@
 .tender-download-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     background-color: #FF7A59;
     color: white;
-    padding: 8px 16px;
+    padding: 8px;
     border-radius: 4px;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
     transition: background-color 0.2s;
 }
 
@@ -65,6 +69,7 @@
 .tender-download-button svg {
     width: 16px;
     height: 16px;
+    margin: 0;
 }
 
 .tender-content {
