@@ -61,6 +61,8 @@ add_action('admin_notices', 'jam_admin_notice_missing_divi');
  */
 function jam_enqueue_scripts() {
     wp_enqueue_style('jam-style', JAM_PLUGIN_URL . 'css/style.css', array(), JAM_VERSION);
+    wp_enqueue_style('jam-job-accordion-style', JAM_PLUGIN_URL . 'css/job-accordion-style.css', array(), JAM_VERSION);
+    wp_enqueue_style('jam-tender-accordion-style', JAM_PLUGIN_URL . 'css/tender-accordion-style.css', array(), JAM_VERSION);
     wp_enqueue_script('jam-script', JAM_PLUGIN_URL . 'js/script.js', array('jquery'), JAM_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'jam_enqueue_scripts');

@@ -1,22 +1,40 @@
 jQuery(document).ready(function($) {
-    // Accordion functionality
-    $('.job-header, .tender-header').on('click', function() {
-        var $accordion = $(this).closest('.jam-job-accordion, .jam-tender-accordion');
-        var $content = $accordion.find('.job-content, .tender-content');
+    // Job Accordion functionality
+    $('.jam-job-accordion .job-header').on('click', function(e) {
+        // Prevent action if clicking on apply button
+        if ($(e.target).closest('.job-apply-button').length) {
+            return;
+        }
         
-        // Toggle active class
-        $accordion.toggleClass('active');
+        var $accordion = $(this).closest('.jam-job-accordion');
+        var $content = $accordion.find('.job-content');
         
-        // Animate content
-        if ($accordion.hasClass('active')) {
-            $content.css('max-height', $content[0].scrollHeight + 'px');
+        // Toggle the accordion
+        $accordion.toggleClass('closed');
+        
+        // Toggle the content display
+        if ($content.is(':visible')) {
+            $content.slideUp(300);
         } else {
-            $content.css('max-height', 0);
+            $content.slideDown(300);
         }
     });
-
-    // Prevent link clicks from triggering accordion
-    $('.job-apply-button, .tender-download-button').on('click', function(e) {
-        e.stopPropagation();
+    
+    // Tender Accordion functionality
+    $('.jam-tender-accordion .tender-header').on('click', function(e) {
+        // Prevent action if clicking on download button
+        if ($(e.target).closest('.tender-download-button').length) {
+            return;
+        }
+        
+        var $accordion = $(this).closest('.jam-tender-accordion');
+        var $content = $accordion.find('.tender-content');
+        
+        // Toggle the content display
+        if ($content.is(':visible')) {
+            $content.slideUp(300);
+        } else {
+            $content.slideDown(300);
+        }
     });
 }); 

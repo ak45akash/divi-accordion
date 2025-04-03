@@ -1,151 +1,311 @@
 /* Common Accordion Styles */
-.jam-job-accordion,
+.jam-job-accordion {
+    margin-bottom: 20px;
+    border: 2px solid #264c45;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    max-width: 100%;
+}
+
 .jam-tender-accordion {
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 8px;
     margin-bottom: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
 
 /* Header Styles */
-.job-header,
-.tender-header {
-    padding: 20px;
-    background: #ffffff;
+.job-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 16px 20px;
+    background-color: #fff;
     cursor: pointer;
     position: relative;
 }
 
+.tender-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
 /* Title Styles */
-.job-title,
+.job-title {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #264c45;
+    padding-right: 15px;
+}
+
 .tender-title {
     font-size: 18px;
     font-weight: 600;
-    color: #333333;
+    color: #333;
     margin: 0;
-    flex: 1;
+}
+
+.tender-title-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 /* Meta Information Styles */
-.job-meta,
-.tender-meta {
+.job-location-apply {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+.tender-info-actions {
     display: flex;
     align-items: center;
     gap: 24px;
-    margin-left: 24px;
+    flex-wrap: wrap;
 }
 
 /* Location and Date Styles */
-.job-location,
-.tender-location,
-.tender-closing-date {
+.job-location {
+    position: relative;
+    color: #264c45;
+    font-size: 13px;
+    background: #f5f5f5;
+    padding: 4px 16px;
+    border-radius: 30px;
+    border: 1px solid #264c45;
+    font-weight: 600;
+    cursor: default;
+}
+
+.tender-location, .tender-closing-date {
+    position: relative;
+    color: #264c45;
+    font-size: 13px;
+    background: #f5f5f5;
+    padding: 4px 16px;
+    border-radius: 30px;
+    border: 1px solid #264c45;
+    font-weight: 600;
+    cursor: default;
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #666666;
-    font-size: 14px;
-    background: #f5f5f5;
-    padding: 6px 12px;
-    border-radius: 16px;
 }
 
-.job-location svg,
-.tender-location svg,
-.tender-closing-date svg {
-    color: #666666;
+.tender-location svg, .tender-closing-date svg {
+    color: #666;
 }
 
 /* Button Styles */
-.job-apply-button,
+.job-apply-button {
+    display: inline-block;
+    padding: 4px 32px !important;
+    background-color: #F7941D !important; /* Orange button color */
+    color: #264c45 !important;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px !important;
+    transition: all 0.3s ease;
+    border: none !important;
+    line-height: 1.4em !important;
+    text-transform: none !important;
+    min-width: 80px;
+    text-align: center;
+    margin-left: 0 !important;
+}
+
+/* Remove default Divi button hover effects */
+.job-apply-button:hover,
+.job-apply-button:after,
+.no-arrow-button:after {
+    padding: 4px 32px !important;
+    opacity: 1 !important;
+    margin-left: 0 !important;
+    background-color: #e06d2e !important;
+    color: #fff !important;
+}
+
+.job-apply-button:after,
+.no-arrow-button:after,
+.et_pb_button.no-arrow-button:after {
+    display: none !important;
+    content: none !important;
+    opacity: 0 !important;
+}
+
 .tender-download-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    background: #007bff;
-    color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.tender-download-button {
+    background-color: #FF7A59;
+    color: white;
     padding: 8px;
     border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
 }
 
-.job-apply-button:hover,
 .tender-download-button:hover {
-    background: #0056b3;
-    color: #ffffff;
+    background-color: #ff8f73;
+}
+
+.tender-download-button svg {
+    width: 16px;
+    height: 16px;
+    margin: 0;
 }
 
 /* Toggle Icon Styles */
 .toggle-icon {
-    margin-left: 16px;
-    transition: transform 0.3s ease;
+    font-size: 12px;
+    color: #666;
 }
 
 .toggle-icon svg {
-    color: #666666;
+    stroke: #666;
+    stroke-width: 2;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
 }
 
-/* Content Styles */
-.job-content,
-.tender-content {
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
+.jam-job-accordion.closed .toggle-icon svg {
+    transform: rotate(0deg);
 }
 
-.job-description,
-.tender-description {
-    padding: 20px;
-    color: #666666;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* Active State Styles */
-.jam-job-accordion.active .toggle-icon,
-.jam-tender-accordion.active .toggle-icon {
+.jam-job-accordion:not(.closed) .toggle-icon svg {
     transform: rotate(180deg);
 }
 
-.jam-job-accordion.active .job-content,
-.jam-tender-accordion.active .tender-content {
-    max-height: 1000px;
-    border-top: 1px solid #e5e5e5;
+/* Hide toggle icon for tenders */
+.jam-tender-accordion .toggle-icon {
+    display: none;
+}
+
+/* Content Styles */
+.job-content {
+    padding: 0 30px 24px;
+    border-top: 1px solid #e2e2e2;
+    display: none;
+}
+
+.tender-content {
+    padding: 0 20px 20px;
+    display: none;
+}
+
+.job-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.tender-description {
+    color: #444;
+    line-height: 1.6;
+}
+
+.tender-description h4 {
+    margin: 16px 0 8px;
+    color: #333;
+}
+
+.tender-description ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.tender-description li {
+    margin-bottom: 8px;
 }
 
 /* Responsive Styles */
-@media (max-width: 767px) {
-    .job-header,
-    .tender-header {
+@media screen and (max-width: 767px) {
+    .jam-job-accordion .job-header {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .jam-job-accordion .job-title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    
+    .jam-job-accordion .job-title {
+        font-size: 16px;
+        margin: 0;
+        padding-right: 15px;
+    }
+    
+    .jam-job-accordion .job-location-apply {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+        margin: 16px 0 8px;
+    }
+    
+    .jam-job-accordion .toggle-icon {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+    }
+    
+    .jam-job-accordion .toggle-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .jam-job-accordion .job-apply-button {
+        padding: 4px 16px !important;
+        font-size: 13px !important;
+    }
+    
+    .jam-job-accordion .job-location {
+        padding: 4px 12px;
+        font-size: 13px;
+    }
+    
+    .jam-job-accordion .job-location svg {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .jam-job-accordion .job-content {
+        padding: 15px;
+    }
+    
+    .tender-info-actions {
+        gap: 16px;
+    }
+    
+    .tender-title {
+        font-size: 16px;
+    }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 479px) {
+    .jam-job-accordion .job-location-apply {
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
     }
-
-    .job-meta,
-    .tender-meta {
-        margin-left: 0;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .toggle-icon {
-        position: absolute;
-        right: 20px;
-        top: 20px;
+    
+    .jam-job-accordion .job-location {
+        margin-bottom: 4px;
     }
 } 
