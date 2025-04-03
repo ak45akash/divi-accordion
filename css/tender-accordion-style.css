@@ -9,6 +9,7 @@
 .tender-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     cursor: pointer;
 }
@@ -16,8 +17,6 @@
 .tender-title-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
 }
 
 .tender-title {
@@ -44,6 +43,9 @@
     border: 1px solid #264c45;
     font-weight: 600;
     cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .tender-location svg, .tender-closing-date svg {

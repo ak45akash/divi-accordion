@@ -19,9 +19,11 @@ define('JAM_VERSION', '1.0.0');
 define('JAM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('JAM_PLUGIN_URL', plugin_dir_url(__FILE__));
 
-// Include the Divi module files
-require_once JAM_PLUGIN_DIR . 'includes/modules/JobAccordion/JobAccordion.php';
-require_once JAM_PLUGIN_DIR . 'includes/modules/TenderAccordion/TenderAccordion.php';
+function jam_initialize_extension() {
+    require_once plugin_dir_path(__FILE__) . 'includes/JobAccordion.php';
+    require_once plugin_dir_path(__FILE__) . 'includes/TenderAccordion.php';
+}
+add_action('divi_extensions_init', 'jam_initialize_extension');
 
 /**
  * Check if Divi theme or Divi Builder is active
